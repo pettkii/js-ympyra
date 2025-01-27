@@ -1,47 +1,31 @@
-// get user input
-/*let halkaisija = prompt("Syötä halkaisija(cm): ");
-console.log("Halkaisija:" + halkaisija);
-*/
 
 // calculate and return circumference
 function laskeym(a){
     return Math.PI * a;
 }
 
-// calculate and returnr area
+// calculate and return area
 function laskepa(a){
     return Math.PI * ((a/2)**2);
 }
-// calculates circumference and area for a given value
+// calculates circumference and area for a given diameter
 function ympa(halkaisija){
     console.log(halkaisija);
 
+    // calculate circumference
     let ympm = laskeym(halkaisija);
+    //console.log(ympm);
 
-    console.log(ympm);
-
+    // calculate area
     let pa = laskepa(halkaisija);
+    //console.log(pa);
 
-    console.log(pa);
-
-    const a = document.createElement('p');
-    a.setAttribute('innerHTML', ympm);
-    const b = document.createElement('p');
-    b.setAttribute('innerHTML', pa);
-
-    document.body.appendChild(a);
-    document.body.appendChild(b);
+    // create elements for circumference and area, add them to the page
+    let a = document.createElement('p');
+    a.innerHTML = `Ympärysmitta: ${ympm} cm`;
+    let b = document.createElement('p');
+    b.innerHTML = `Pinta-ala: ${pa} cm^2`;
+    let parent = document.querySelector('#tuloste');
+    parent.appendChild(a);
+    parent.appendChild(b);
 }
-
-
-/*
-// calculate circumference
-let ympm = Math.PI * halkaisija;
-
-console.log(ympm);
-
-// calculate area
-let pa = Math.PI * ((halkaisija/2)**2);
-
-console.log(pa);
-*/
