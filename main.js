@@ -8,7 +8,7 @@ function laskeym(a){
 function laskepa(a){
     return Math.PI * ((a/2)**2);
 }
-// calculates circumference and area for a given diameter
+// calculates circumference and area for a given diameter and displays them
 function ympa(halkaisija){
     console.log(halkaisija);
 
